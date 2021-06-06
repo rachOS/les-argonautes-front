@@ -3,14 +3,12 @@ import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import Main from "./components/main/Main";
 
-function App() {
+export default function App() {
   return (
-    <div classNameName="">
+    <>
       <Header />
       <Main />
       <Footer />
-    </div>
+    </>
   );
 }
-
-export default App;

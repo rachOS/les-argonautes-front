@@ -1,8 +1,21 @@
 import PropTypes from "prop-types";
+import Axios from "axios";
+import { useState, useEffect } from "react";
 
 function Main(props) {
+  const [test, setTest] = useState({});
+
+  const testFn = () =>
+    Axios.get("http://localhost:8080/api")
+      .then((r) => r.data)
+      .then((data) => setTest(data));
+  useEffect(() => {
+    testFn();
+  }, []);
+
   return (
     <main>
+      {test.title}
       <h2>Ajouter un(e) Argonaute</h2>
       <form className="new-member-form">
         <label htmlFor="name">Nom de l&apos;Argonaute</label>
@@ -10,6 +23,8 @@ function Main(props) {
         <button type="submit">Envoyer</button>
       </form>
 
+      {/* <Form/> */}
+      {/* <Members/> */}
       <h2>Membres de l'équipage</h2>
       <section className="member-list">
         <div className="member-item">Eleftheria</div>
