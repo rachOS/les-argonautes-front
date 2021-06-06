@@ -1,8 +1,9 @@
+import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
   return (
-    <main classNameName="">
+    <main classNameName="App">
       <header>
         <h1>
           <img
