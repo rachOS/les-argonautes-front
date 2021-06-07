@@ -6,7 +6,7 @@ function Main(props) {
   const [test, setTest] = useState({});
 
   const testFn = () => {
-    const url = `${process.env.REACT_APP_HOST}/api`;
+    const url = `${process.env.REACT_APP_HOST}`;
     return Axios.get(url)
       .then((r) => r.data)
       .then((data) => setTest(data));
