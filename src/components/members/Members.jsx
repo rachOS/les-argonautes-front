@@ -8,7 +8,11 @@ export default function Members() {
 
   const getMembers = async () => {
     const url = await `${process.env.REACT_APP_HOST}/members`;
-    return await Axios.get(url)
+    return await Axios.get({
+      method: "get",
+      withCredentials: true,
+      url: url,
+    })
       .then((r) => r.data)
       .then((data) => setMembers(data));
   };
