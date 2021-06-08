@@ -22,7 +22,6 @@ export default function Members() {
           "PATCH",
           "PUT",
           "DELETE",
-          "OPTIONS",
         ],
         "Access-Control-Allow-Headers": [
           "Origin",
