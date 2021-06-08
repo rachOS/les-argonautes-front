@@ -13,12 +13,22 @@ export default function Members() {
     const options = {
       method: "GET",
       withCredentials: true,
-      url,
+      url: url,
       headers: {
         "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods":
-          "GET, POST, PATCH, PUT, DELETE, OPTIONS",
-        "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token",
+        "Access-Control-Allow-Methods": [
+          "GET",
+          "POST",
+          "PATCH",
+          "PUT",
+          "DELETE",
+          "OPTIONS",
+        ],
+        "Access-Control-Allow-Headers": [
+          "Origin",
+          "Content-Type",
+          "X-Auth-Token",
+        ],
       },
     };
     return await Axios(options)
