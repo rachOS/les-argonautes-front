@@ -10,7 +10,12 @@ export default function Members() {
 
   const getMembers = async () => {
     const url = await `${process.env.REACT_APP_HOST}/members`;
-    const options = { method: "GET", withCredentials: true, url };
+    const options = {
+      method: "GET",
+      withCredentials: true,
+      url,
+      headers: { "Access-Control-Allow-Origin": "*" },
+    };
     return await Axios(options)
       .then((r) => {
         setMembers(r.data);
