@@ -14,7 +14,12 @@ export default function Members() {
       method: "GET",
       withCredentials: true,
       url,
-      headers: { "Access-Control-Allow-Origin": "*" },
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods":
+          "GET, POST, PATCH, PUT, DELETE, OPTIONS",
+        "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token",
+      },
     };
     return await Axios(options)
       .then((r) => {
