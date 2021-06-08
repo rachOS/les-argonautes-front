@@ -4,17 +4,18 @@ import Axios from "axios";
 
 export default function Members() {
   const [members, setMembers] = useState([{}]);
-  console.log(members);
+  const [error, setError] = useState({});
+  console.log(error);
+  console.log("members", members);
 
   const getMembers = async () => {
     const url = await `${process.env.REACT_APP_HOST}/members`;
-    return await Axios.get({
-      method: "get",
-      withCredentials: true,
-      url: url,
-    })
-      .then((r) => r.data)
-      .then((data) => setMembers(data));
+    const options = { method: "GET", withCredentials: true, url };
+    return await Axios(options)
+      .then((r) => {
+        setMembers(r.data);
+      })
+      .catch((e) => setError(e));
   };
 
   useEffect(() => {
