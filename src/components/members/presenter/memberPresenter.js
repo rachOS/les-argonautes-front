@@ -1,16 +1,16 @@
 export const setMembersDatas = (argonauts) => {
   return {
-    argonauts,
+    argonauts: normalize(argonauts),
     normalize,
   };
 };
 
 export const normalize = (argonauts) => {
-  const randomGroup = Math.ceil(Math.random() * 3);
   return argonauts.map((argonaut, index) => {
+    const randomGroup = Math.ceil(Math.random() * 3);
     return {
       ...argonaut,
-      group: index >= 1 && index <= 3 ? index : randomGroup,
+      group: randomGroup,
     };
   });
 };

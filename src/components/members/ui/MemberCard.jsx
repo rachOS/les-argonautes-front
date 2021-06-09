@@ -1,12 +1,7 @@
 import PropTypes from "prop-types";
 
-function MemberCard({ memberName, group }) {
-  return (
-    <td className="member-item">
-      {memberName}
-      {group}
-    </td>
-  );
+function MemberCard({ memberName }) {
+  return <td className="member-item">{memberName}</td>;
 }
 MemberCard.propTypes = { member: PropTypes.string };
 

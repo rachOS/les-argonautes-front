@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import "./style/columns.css";
 
 function Column({ children }) {
-  return <div className="column">{children}</div>;
+  return <tr className="column">{children}</tr>;
 }
 Column.propTypes = { column: PropTypes.array };
 
