@@ -1,5 +1,5 @@
 //* CORE */
-import { Fragment, useState } from "react";
+import { useState } from "react";
 import Axios from "axios";
 
 function Form() {
@@ -18,9 +18,9 @@ function Form() {
   };
 
   return (
-    <Fragment>
+    <div className="new-member-form">
       <h2>Ajouter un(e) Argonaute</h2>
-      <form className="new-member-form" onSubmit={() => postNewMember()}>
+      <form onSubmit={() => postNewMember()}>
         <label htmlFor="name">Nom de l&apos;Argonaute</label>
         <input
           id="name"
@@ -31,7 +31,7 @@ function Form() {
         />
         <button type="submit">Envoyer</button>
       </form>
-    </Fragment>
+    </div>
   );
 }
 
