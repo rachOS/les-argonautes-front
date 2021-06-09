@@ -22,21 +22,13 @@ export default function MembersContainer({ membersDatas }) {
         </tr>
       </thead>
       <tbody>
-        <Column>
-          {getMemberPerGroupNumber(1).map((member) => (
-            <MemberCard member={member.name} group={member.group} />
-          ))}
-        </Column>
-        <Column>
-          {getMemberPerGroupNumber(2).map((member) => (
-            <MemberCard member={member.name} group={member.group} />
-          ))}
-        </Column>
-        <Column>
-          {getMemberPerGroupNumber(3).map((member) => (
-            <MemberCard member={member.name} group={member.group} />
-          ))}
-        </Column>
+        {[1, 2, 3].map((col, index) => (
+          <Column key={index}>
+            {getMemberPerGroupNumber(col).map((member) => (
+              <MemberCard memberName={member.name} group={member.group} />
+            ))}
+          </Column>
+        ))}
       </tbody>
     </table>
   );

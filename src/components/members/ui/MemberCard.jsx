@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 
-function MemberCard({ member, group }) {
+function MemberCard({ memberName, group }) {
   return (
     <td className="member-item">
-      {member}
+      {memberName}
       {group}
     </td>
   );
