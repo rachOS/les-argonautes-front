@@ -1,9 +1,10 @@
 table {
   border: 1px solid #f76c6c;
   border-radius: 5px;
-  width: 80%;
+  width: max-content;
   align-self: center;
   display: table;
+  padding: 13px;
 }
 
 thead {
@@ -41,4 +42,8 @@ td {
   background-color: #f4f4f4;
   margin: 2px 5px;
   text-align: center;
+}
+
+td.member-item {
+  padding: 13px;
 }
