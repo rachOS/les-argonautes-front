@@ -1,0 +1,9 @@
+.column {
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin: 5px 1px;
+  padding: 5px;
+  border-radius: 5px;
+  background: #f76c6c;
+}

@@ -1,12 +1,12 @@
 import PropTypes from "prop-types";
-import Members from "../members/Members";
+import MembersManager from "../members/manager/memberManager";
 import Form from "../form/Form";
 
 function Main(props) {
   return (
     <main>
       <Form />
-      <Members />
+      <MembersManager />
     </main>
   );
 }
