@@ -1,0 +1,43 @@
+table {
+  border: 1px solid #f76c6c;
+  border-radius: 5px;
+  width: 80%;
+  align-self: center;
+  display: table;
+}
+
+thead {
+  border: 2px solid green;
+  display: table-header-group;
+}
+tbody {
+  display: flex;
+}
+
+th {
+  font-size: large;
+  text-align: center;
+  padding: 5px;
+}
+
+tr {
+}
+tr.col-1,
+tr.col-2,
+tr.col-3 {
+  display: flex;
+  height: 100%;
+  flex-grow: 1;
+  margin: 5px;
+  padding: 5px;
+  background-color: #f76c6c;
+  flex-direction: column;
+  border-radius: 2px;
+}
+
+td {
+  border-radius: 3px;
+  background-color: #f4f4f4;
+  margin: 2px 5px;
+  text-align: center;
+}
